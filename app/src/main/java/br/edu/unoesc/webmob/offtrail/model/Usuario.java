@@ -4,13 +4,13 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
-public class Grupo {
+public class Usuario {
     @DatabaseField(generatedId = true)
     private Integer codigo;
     @DatabaseField(canBeNull = false)
-    private String nome;
-    @DatabaseField(foreign = true, foreignColumnName = "codigo")
-    private Cidade cidade;
+    private String email;
+    @DatabaseField(canBeNull = false)
+    private String senha;
 
     public Integer getCodigo() {
         return codigo;
@@ -20,19 +20,19 @@ public class Grupo {
         this.codigo = codigo;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

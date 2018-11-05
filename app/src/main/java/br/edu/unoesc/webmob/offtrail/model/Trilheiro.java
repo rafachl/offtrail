@@ -4,13 +4,15 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
-public class Grupo {
+public class Trilheiro {
     @DatabaseField(generatedId = true)
     private Integer codigo;
     @DatabaseField(canBeNull = false)
     private String nome;
+    @DatabaseField(canBeNull = false)
+    private String idade;
     @DatabaseField(foreign = true, foreignColumnName = "codigo")
-    private Cidade cidade;
+    private Moto moto;
 
     public Integer getCodigo() {
         return codigo;
@@ -28,11 +30,19 @@ public class Grupo {
         this.nome = nome;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public String getIdade() {
+        return idade;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public Moto getMoto() {
+        return moto;
+    }
+
+    public void setMoto(Moto moto) {
+        this.moto = moto;
     }
 }

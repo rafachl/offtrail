@@ -3,4 +3,6 @@
     <string name="app_name">OffTrail</string>
     <string name="carregando">Carregando, tenha calma jovem</string>
     <string name="login">Login</string>
+    <string name="nome_trilheiro">Nome</string>
+
 </resources>

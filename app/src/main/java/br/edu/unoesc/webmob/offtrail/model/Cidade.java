@@ -5,22 +5,19 @@ import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
 public class Cidade {
-
     @DatabaseField(generatedId = true)
-    private Integer id;
-
+    private Integer codigo;
     @DatabaseField(canBeNull = false)
     private String nome;
 
-    public Cidade() {
+    public Cidade() {}
+
+    public Integer getCodigo() {
+        return codigo;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
     }
 
     public String getNome() {
