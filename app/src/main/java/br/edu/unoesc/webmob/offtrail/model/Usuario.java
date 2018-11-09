@@ -11,7 +11,8 @@ public class Usuario {
     private String email;
     @DatabaseField(canBeNull = false)
     private String senha;
-
+    public Usuario(){
+    }
     public Integer getCodigo() {
         return codigo;
     }

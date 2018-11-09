@@ -1,10 +1,11 @@
 package br.edu.unoesc.webmob.offtrail.model;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
-public class Trilheiro {
+public class Trilheiro    {
     @DatabaseField(generatedId = true)
     private Integer codigo;
     @DatabaseField(canBeNull = false)
@@ -14,6 +15,19 @@ public class Trilheiro {
     @DatabaseField(foreign = true, foreignColumnName = "codigo")
     private Moto moto;
 
+    @DatabaseField(dataType=DataType.BYTE_ARRAY)
+    private byte[] foto;
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    public Trilheiro() {
+    }
     public Integer getCodigo() {
         return codigo;
     }

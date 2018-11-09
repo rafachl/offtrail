@@ -9,8 +9,8 @@ public class Cidade {
     private Integer codigo;
     @DatabaseField(canBeNull = false)
     private String nome;
-
-    public Cidade() {}
+    public Cidade() {
+    }
 
     public Integer getCodigo() {
         return codigo;

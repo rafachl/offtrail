@@ -11,6 +11,8 @@ public class Grupo {
     private String nome;
     @DatabaseField(foreign = true, foreignColumnName = "codigo")
     private Cidade cidade;
+    public Grupo(){
+    }
 
     public Integer getCodigo() {
         return codigo;

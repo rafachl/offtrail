@@ -15,7 +15,8 @@ public class Moto {
     private String cilindrada;
     @DatabaseField(canBeNull = false)
     private String cor;
-    
+    public Moto(){
+    }
     public Integer getCodigo() {
         return codigo;
     }
